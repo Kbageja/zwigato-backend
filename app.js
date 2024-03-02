@@ -5,6 +5,10 @@ import Reviewrouter from "./routes/review.js";
 import contactrouter from "./routes/contact.js";
 import orderrouter from "./routes/order.js";
 import cors from "cors";
+import { config } from 'dotenv';
+config({
+    path:"./data/config.env",
+})
 
 export const app  = express();
 app.use(express.json());
