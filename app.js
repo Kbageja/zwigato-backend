@@ -18,6 +18,7 @@ app.use(cors({
     methods:["GET","POST"],
     credentials:true,
 }))
+console.log(process.env.FRONTENDURL)
 app.use("/user",Userrouter);
 app.use("/review",Reviewrouter);
 app.use("/usercontact",contactrouter)
