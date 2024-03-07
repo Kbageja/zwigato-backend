@@ -4,5 +4,5 @@ import { allreview, newreview } from "../controllers/review.js";
 
 const router = express.Router();
 router.post("/newreview",isAuthenticated,newreview);
-router.get("/allreview",isAuthenticated,allreview);
+router.get("/allreview",allreview);
 export default router;
