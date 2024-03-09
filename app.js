@@ -4,6 +4,7 @@ import Userrouter from "./routes/user.js";
 import Reviewrouter from "./routes/review.js";
 import contactrouter from "./routes/contact.js";
 import orderrouter from "./routes/order.js";
+import productrouter from "./routes/product.js"
 import cors from "cors";
 import { config } from 'dotenv';
 config({
@@ -23,6 +24,7 @@ app.use("/user",Userrouter);
 app.use("/review",Reviewrouter);
 app.use("/usercontact",contactrouter)
 app.use("/userorders",orderrouter);
+app.use("/userproduct",productrouter)
 app.use("/",(req,res)=>{
     res.send("nice working");
 })
