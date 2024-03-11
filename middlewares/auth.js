@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 import { User } from "../model/user.js";
 
 export const isAuthenticated = async (req,res,next) =>{
-    cookieParser()(req,res,()=>{});
+   
     const {token} = req.cookies;
     if(!token){
         return res.status(404).json({

@@ -15,13 +15,14 @@ export const  getmyprofile = (req,res)=>{
 
     })}
 export const logout = (req,res)=>{
-    res.status(200).cookie("token","",{
-        expires:new Date(Date.now()),
-    sameSite:"none",
-    secure:true,
+    res.status(201).clearCookie("token",{
+        httpOnly:true,
+        sameSite:"none",
+        secure:true,
+        path:"/", 
     }).json({
         success:true,
-        message:"logout successfully",
+        message:"logout good",
     })}
 export const register = async(req,res) =>{
     const {name,email,password} = req.body;
