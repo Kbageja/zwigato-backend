@@ -2,7 +2,7 @@ import { Product } from "../model/product.js";
 
 
 export const Productcontroller = async(req,res)=>{
-    const {productname,Price} = req.body;
+    const {productname,Price,quantity} = req.body;
     let Products = await Product.create({
         Username:req.user.name,
         productname,

@@ -7,15 +7,20 @@ config({
 connectDB();
 const schema = new mongoose.Schema({
     name:String,
+    quantity:{
+        type:Number,
+        default:1,
+
+    },
     order:{
-        type:Array,
-        default:[],
+        type:String,
+        required:true,
     },
     orderedAt:{
         type:Date,
         default:Date.now(),
     },
-    totalprice:{
+    price:{
         type:Number,
         required:true,
     }
