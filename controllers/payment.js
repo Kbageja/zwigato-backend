@@ -33,7 +33,7 @@ export const paymentverification = async (req, res) => {
 
         if (generated_signature === razorpay_signature) {
             try {
-                res.send("hello");
+                res.send("YOUR PAYMENT IS SUCCESSFULL");
                 res.redirect("https://zwigato-omega.vercel.app/api/verify");
                 res.status(200).json({
                     success: true,
