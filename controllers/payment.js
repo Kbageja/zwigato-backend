@@ -31,7 +31,7 @@ export const paymentverification = async (req, res) => {
         const generated_signature = generateHmacSha256(razorpay_order_id + "|" + razorpay_payment_id, process.env.Razorkeysecret);
 
         if (generated_signature === razorpay_signature) {
-            res.redirect("http://localhost:5173/api/verify");
+            res.redirect("https://zwigato-omega.vercel.app/api/verify");
             res.status(200).json({
                 success: true,
                 message: "Payment is successful",
