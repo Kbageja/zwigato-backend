@@ -29,6 +29,7 @@ export const paymentverification = async (req, res) => {
     try {
         const { razorpay_payment_id, razorpay_order_id, razorpay_signature } = req.body;
         const generated_signature = generateHmacSha256(razorpay_order_id + "|" + razorpay_payment_id, process.env.Razorkeysecret);
+        res.send("hello");
 
         if (generated_signature === razorpay_signature) {
             try {

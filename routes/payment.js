@@ -4,7 +4,7 @@ import { isAuthenticated } from "../middlewares/auth.js";
 
 const router = express.Router();
 
-router.post("/checkout",isAuthenticated,checkout);
+router.post("/checkout",checkout);
 router.post("/verify",paymentverification);
 router.get("/getkey",getkey);
 
